@@ -2,9 +2,9 @@
 """Module containing BaseModel to be used by other classes"""
 
 
+import models
 import uuid
 from datetime import datetime
-from models import storage
 
 
 class BaseModel:
@@ -25,7 +25,7 @@ class BaseModel:
                 else:
                     self.__dict__[key] = value
         else:
-            storage.new(self)
+            models.storage.new(self)
 
     def __str__(self):
         """string representaion of instance"""
@@ -37,7 +37,7 @@ class BaseModel:
         """save instance to json file"""
 
         self.updated_at = datetime.today()
-        storage.save()
+        models.storage.save()
 
     def to_dict(self):
         """converts instance to to dictionary"""
