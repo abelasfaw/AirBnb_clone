@@ -37,6 +37,13 @@ class HBNBCommand(cmd.Cmd):
         print("Quit command to exit the program")
         print()
 
+    def do_create(self, class_name):
+        if(class_name is None):
+            print("** class name missing **")
+        else if (class_name != 'BaseModel'):
+            
+        
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
