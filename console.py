@@ -214,13 +214,6 @@ class HBNBCommand(cmd.Cmd):
                 setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
 
-    def do_create(self, class_name):
-        if(class_name is None):
-            print("** class name missing **")
-        else if (class_name != 'BaseModel'):
-            
-        
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
